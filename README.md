@@ -17,13 +17,13 @@ To use this implementation, follow these steps:
 
     bash
 
-git clone https://github.com/yourusername/segmented-sieve-radix.git
+git clone https://github.com/olsmithy1/segmented-sieve-eratosthenes-radix.git
 
 Navigate to the project directory:
 
 bash
 
-cd segmented-sieve-radix
+cd segmented-sieve-eratosthenes-radix
 
 Modify the script as needed, setting the desired segment [L, R]:
 
