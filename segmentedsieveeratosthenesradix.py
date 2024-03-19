@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue March 19 11:05:43 2023
+
+@author: Sean Smith
+"""
+
 def sieve_eratosthenes(n):
     # Initialize a list of booleans to mark numbers as prime or not
     is_prime = [True] * (n + 1)
@@ -34,6 +41,6 @@ def segmented_sieve_radix(L, R):
     return segment_primes
 
 if __name__ == "__main__":
-    L, R = 2 ** 77232917, 2 ** 82589933
+    L, R = 0, 200
     segment_primes = segmented_sieve_radix(L, R)
     print("Prime numbers in the segment [{}, {}]:".format(L, R), segment_primes)
