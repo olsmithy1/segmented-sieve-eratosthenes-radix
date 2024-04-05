@@ -1,6 +1,7 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue March 19 11:05:43 2023
+Created on Fri Apr  5 05:40:53 2024
 
 @author: Sean Smith
 """
@@ -31,7 +32,9 @@ def segmented_sieve_radix(L, R):
     # Mark multiples of primes in the current segment using radix sort
     for prime in primes:
         start = max(prime * prime, L)  # First multiple in the segment
-        for num in range(start, R + 1, prime):
+        if start % 2 == 0:  # Ensure we start with an odd multiple
+            start += prime  # Move to the next odd multiple
+        for num in range(start, R + 1, 2 * prime):  # Increment by 2 * prime to skip even multiples
             if num >= 2 and num - L >= 0:  # Ensure the index is valid
                 is_prime_segment[num - L] = False
 
